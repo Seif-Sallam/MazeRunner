@@ -1,0 +1,2 @@
+# SFMLTemplate
+SFML Linux Template
