@@ -13,9 +13,9 @@ void Animator::SetCurrentAnimation(const std::string &name)
     else
         m_ActiveAnimation = nullptr;
 }
-void Animator::AddAnimation(const std::string &name, Animation &animation)
+void Animator::AddAnimation(Animation &animation)
 {
-    m_Animations.insert(std::make_pair(name, animation));
+    m_Animations.insert(std::make_pair(animation.GetName(), animation));
 }
 void Animator::Update(const sf::Time &deltaTime)
 {
@@ -27,6 +27,7 @@ void Animator::Update(const sf::Time &deltaTime)
             m_ActiveAnimation->Play();
             m_LastAnimation = m_ActiveAnimation;
         }
-        m_Sprite.setTextureRect(m_ActiveAnimation->Update(deltaTime));
+        sf::IntRect rect = m_ActiveAnimation->Update(deltaTime);
+        m_Sprite.setTextureRect(rect);
     }
 }

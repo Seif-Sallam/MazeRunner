@@ -12,7 +12,7 @@ class Animator
 public:
     Animator(sf::Sprite &parentSprite);
     void SetCurrentAnimation(const std::string &name);
-    void AddAnimation(const std::string &name, Animation &animation);
+    void AddAnimation(Animation &animation);
     void Update(const sf::Time &deltaTime);
 
 private:

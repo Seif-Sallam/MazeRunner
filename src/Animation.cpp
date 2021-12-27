@@ -92,7 +92,7 @@ sf::IntRect Animation::Update(const sf::Time &deltaTime)
                         Stop();
                 }
             }
-            return m_Frames[m_FramePointer & m_Frames.size()].bounds;
+            return m_Frames[m_FramePointer % m_Frames.size()].bounds;
         }
         std::cout << "FRAMES\n";
     }

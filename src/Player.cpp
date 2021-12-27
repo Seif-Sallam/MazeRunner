@@ -21,7 +21,7 @@ void Player::SetTextureAtles(const std::string &fileName)
 
 void Player::Update(const sf::Time &deltaTime)
 {
-    // this->m_Animator->SetCurrentAnimation("IDLE");
+    m_Animator->SetCurrentAnimation("IDLE");
     HandleAnimations(deltaTime);
     float dt = deltaTime.asSeconds();
     // Move the player without any constraints
@@ -56,12 +56,12 @@ void Player::draw(sf::RenderTarget &window, sf::RenderStates state) const
 void Player::HandleAnimations(const sf::Time &deltaTime)
 {
 
-    // m_Animator->Update(deltaTime);
+    m_Animator->Update(deltaTime);
 
     // m_Sprite.setTextureRect(sf::IntRect(m_Sprite.getPosition().x, m_Sprite.getPosition().y, 32, 32));
 }
 
 void Player::AddAnimation(Animation &anim)
 {
-    // m_Animator->AddAnimation(anim.GetName(), anim);
+    m_Animator->AddAnimation(anim);
 }
