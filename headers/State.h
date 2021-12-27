@@ -11,7 +11,7 @@ namespace state
     public:
         State() {}
         virtual ~State() {}
-        virtual void Update(float deltaTime) {}
+        virtual void Update(const sf::Time &deltaTime) {}
         virtual void Render(sf::RenderWindow &window) {}
         virtual void HandleEvents(sf::Event &event) {}
     };

@@ -10,7 +10,7 @@ namespace state
     public:
         StateHandler(State *&currentState);
         ~StateHandler();
-        void Update(float deltaTime) override;
+        void Update(const sf::Time &deltaTime) override;
         void Render(sf::RenderWindow &window) override;
 
         template <class T>

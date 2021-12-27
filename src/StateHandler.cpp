@@ -11,7 +11,7 @@ namespace state
     {
     }
 
-    void StateHandler::Update(float deltaTime)
+    void StateHandler::Update(const sf::Time &deltaTime)
     {
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
         {

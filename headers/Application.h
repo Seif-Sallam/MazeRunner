@@ -13,7 +13,7 @@ public:
 
 private:
     void EventHandler();
-    void Update(float deltaTime);
+    void Update(const sf::Time &deltaTime);
     void Render();
 
 private:

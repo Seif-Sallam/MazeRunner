@@ -22,14 +22,14 @@ void Application::Run()
 {
     while (m_Window->isOpen())
     {
-        float deltaTime = m_Clock.restart().asSeconds();
+        sf::Time deltaTime = m_Clock.restart();
         EventHandler();
         Update(deltaTime);
         Render();
     }
 }
 
-void Application::Update(float deltaTime)
+void Application::Update(const sf::Time &deltaTime)
 {
     m_CurrentState->Update(deltaTime);
 }
