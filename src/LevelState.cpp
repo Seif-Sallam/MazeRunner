@@ -7,14 +7,8 @@ namespace state
     {
         m_View.setCenter(sf::Vector2f(0.f, 0.f));
         m_Maze = GenerateMaze(m_MazeSizeX, m_MazeSizeY, 0, 0, (unsigned int)time(0));
-        m_Player.SetPosition(sf::Vector2f(0.f, 0.f));
+        m_Player.Init(m_Maze, m_MazeSizeX, m_MazeSizeY, 0, 0);
         m_Player.SetTextureAtles("rsc/Player.png");
-        Animation anim("IDLE");
-        sf::Time delay = sf::seconds(1.f);
-
-        anim.AddFrame(sf::IntRect(0, 0, 51, 44), delay);
-        anim.Loop(true);
-        m_Player.AddAnimation(anim);
     }
 
     LevelState::~LevelState()
